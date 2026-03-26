@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+}
+body{
+    background-color: #000000;
+    background-image: url(background.webp);
+    background-size: cover;
+    /*background-repeat: no-repeat;**/
+    font-family: "Barlow", sans-serif;
+    color: #ffffff;
+
+    display: flex;
+    align-items: center;
+
+    height: 100vh;
+}
+
+h1{
+    font-size: 48px;
+    
+}
+
+h2{
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+p{
+    font-size: 22px;
+} 
+
+/*Foi preciso colocar aqui dentro da tag do link, 
+pois só colocar no body não vai forçar a mudança 
+de cor que é padrão dos links*/
+.btn{
+    color:#ffffff;
+    text-decoration: none;
+    border: solid 1px #ffffff;
+    border-radius: 10px;
+
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    display: inline-block;
+    margin-top: 48px;
+}
+
+.btn:hover{
+    color: #b4ad27;
+    border-color: #b4ad27;
+}
+
+.container{
+    width:100%;
+    max-width:1259px;
+    margin: 0 auto; /*forma de centralizar mais comum*/
+
+     display: flex; /*--> Os demais itens do flex box só funciona depois dessa tag. Ela meio que 
+                    desbloqueia os demais para uso. Sem  ele não funciona*/
+    align-items: center; /*-->Alinha verticalmente os filhos do conteiner*/
+    column-gap: 25px;
+}
+
+.info{
+    font-size: 18px;
+    margin-top: 13px;
+    margin-bottom: 25px;
+}
+
+.info strong{
+    color: #b4ad27;
+    margin-left: 12px;
+}
+
+
+/*Media Queries*/
+/*Condição para alteração do projeto mediante a um tamanho de tela*/
+@media(max-width:850px){
+    body{
+        background-position: center;
+    }
+
+    h1{
+        font-size: 30px;
+    }
+
+    .poster{
+        display: none;
+    }
+}
